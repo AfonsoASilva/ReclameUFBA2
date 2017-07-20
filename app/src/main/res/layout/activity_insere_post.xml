@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.reclameufba.InserePostActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +14,8 @@
         <EditText
             android:id="@+id/formulario_titulo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="Dê um título ao seu post" />
 
         <EditText
             android:id="@+id/formulario_descricao"
@@ -27,7 +29,7 @@
             android:id="@+id/formulario_localizacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Inserir localização"  />
+            android:hint="Inserir localização"  />
 
        <RelativeLayout
            android:layout_width="match_parent"
@@ -50,28 +52,7 @@
                android:layout_alignParentBottom="true"
                android:layout_alignParentRight="true"
                android:background="@drawable/camera" />
-        </RelativeLayout>
+            </RelativeLayout>
 
-         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2.25">
-            <Button
-                android:id="@+id/formulario_botaoLike"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/like" />
-
-            <Button
-                android:id="@+id/formulario_botaoDeslike"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="left"
-                android:background="@drawable/deslike" />
-
-        </LinearLayout>
-   </LinearLayout>
+           </LinearLayout>
 </ScrollView>
