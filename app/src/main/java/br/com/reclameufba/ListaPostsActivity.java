@@ -36,7 +36,7 @@ public class ListaPostsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intentVaiProFormulario = new Intent(ListaPostsActivity.this, InserePostActivity.class);
-                startActivity(intentVaiProFormulario);
+                ListaPostsActivity.this.startActivity(intentVaiProFormulario);
             }
         });
         registerForContextMenu(listaPosts);

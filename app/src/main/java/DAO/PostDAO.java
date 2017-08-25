@@ -24,6 +24,7 @@ public class PostDAO  extends SQLiteOpenHelper {
                 "descricao TEXT, " +
                  "like INTEGER, " +
                 "deslike INTEGER, " +
+                "localizacao TEXT"+
                 "dataHora TIMESTAMP, " +
                 "caminhoFoto TEXT); ";
 
@@ -45,6 +46,7 @@ public class PostDAO  extends SQLiteOpenHelper {
         dados.put("like", post.getLike());
         dados.put("deslike", post.getDeslike());
         dados.put("dataHora", String.valueOf(post.getDataHora()));
+        dados.put("localizacao", "UFBA");
         dados.put("caminhoFoto", post.getCaminhoFoto());
 
         db.insert("Posts", null, dados);
