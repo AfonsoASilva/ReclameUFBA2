@@ -3,6 +3,33 @@
 
     <item
         is-multidex="true"
+        jar="/home/afonso/.android/build-cache/f6ddc64c396bfcc91516d547a4e5ef5f85374430/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0c6924cbba8248329a8c58ead6a380efe7eee76e">
+        <dex dex="/home/afonso/Computacao/Android/ReclaUFBA/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c6569d5822678ab59f88c102e7507434c1c6cb33/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/afonso/.android/build-cache/e99fa619fee897cfa4d0161796a05d4a7ca7a71e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="900a290779cdb4eb2e63b6f7806fd9f30ce4f60d">
+        <dex dex="/home/afonso/Computacao/Android/ReclaUFBA/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7ba525df2ea7fa004c7328989b522a755b576de7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/afonso/.android/build-cache/7f5913f80ff9ad9208ad15e97c0beedce6b3341b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3f0a85e6000998ac322ddd50750e8cf91601a84b">
+        <dex dex="/home/afonso/Computacao/Android/ReclaUFBA/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e5a018600e5c0a55f663d408512de7b2a185b80b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/afonso/Computacao/Android/ReclaUFBA/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -16,8 +43,17 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="fc58f5d66a90ceb221470f09ca8f3e644b3f3dcd">
+        sha1="45ab05e328238c54bdd4be6bbe10e3e515c09919">
         <dex dex="/home/afonso/Computacao/Android/ReclaUFBA/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ed1aaba18073e4bf4065e70c66f9c11bb4411a90/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/afonso/.android/build-cache/870419e3810ed0f7a56971ff650db19dcc530803/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="69e74a8b1cbf5b8ee0fc0cca6bab1ac6c45efef8">
+        <dex dex="/home/afonso/Computacao/Android/ReclaUFBA/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7a76286df74a4b182702dbd9f12611955be18118/classes.dex" />
     </item>
 
 </items>

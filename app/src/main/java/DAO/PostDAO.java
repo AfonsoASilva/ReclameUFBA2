@@ -10,6 +10,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+import Controller.PostController;
 import modelo.Post;
 
 public class PostDAO  extends SQLiteOpenHelper {
@@ -26,7 +27,7 @@ public class PostDAO  extends SQLiteOpenHelper {
                 "deslike INTEGER, " +
                 "localizacao TEXT"+
                 "dataHora TIMESTAMP, " +
-                "caminhoFoto TEXT); ";
+                "bytesFoto BLOB); ";
 
         db.execSQL(sql);
     }
@@ -47,7 +48,7 @@ public class PostDAO  extends SQLiteOpenHelper {
         dados.put("deslike", post.getDeslike());
         dados.put("dataHora", String.valueOf(post.getDataHora()));
         dados.put("localizacao", "UFBA");
-        dados.put("caminhoFoto", post.getCaminhoFoto());
+        dados.put("bytesFoto", post.getPhotoBytes());
 
         db.insert("Posts", null, dados);
     }
@@ -93,7 +94,7 @@ public class PostDAO  extends SQLiteOpenHelper {
         dados.put("like", post.getLike());
         dados.put("deslike", post.getDeslike());
         dados.put("localizacao", post.getLocalizacao());
-        dados.put("caminhoFoto", post.getCaminhoFoto());
+        dados.put("bytesFoto", post.getPhotoBytes());;
 
         String[] params={
                 post.getId().toString()

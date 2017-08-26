@@ -7,6 +7,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.ByteArrayOutputStream;
+
 import br.com.reclameufba.InserePostActivity;
 import br.com.reclameufba.R;
 import modelo.Post;
@@ -18,6 +20,11 @@ public class PostController extends Activity {
     private EditText descricao;
     private EditText localizacao;
     private final ImageView foto;
+
+    public ImageView getFoto() {
+        return foto;
+    }
+
     private TextView like;
     private TextView deslike;
 
@@ -30,14 +37,22 @@ public class PostController extends Activity {
         localizacao= (EditText) activity.findViewById(R.id.formulario_localizacao);
     }
     public Post recebePost(){
-
         post.setTitulo(titulo.getText().toString());
         post.setDescricao(descricao.getText().toString());
         post.setCaminhoFoto((String)foto.getTag());
         post.setLocalizacao(localizacao.getText().toString());
-
+        byte[] bytes = getBytes(foto.getDrawingCache());
+        post.setPhotoBytes(bytes);
         return post;
     }
+
+    // convert from bitmap to byte array
+    public static byte[] getBytes(Bitmap bitmap) {
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 0, stream);
+        return stream.toByteArray();
+    }
+
     public void descrevePost(Post post) {
 
         this.post = post;

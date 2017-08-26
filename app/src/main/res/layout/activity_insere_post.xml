@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context="br.com.reclameufba.InserePostActivity">
 
     <LinearLayout
@@ -21,15 +21,15 @@
             android:id="@+id/formulario_descricao"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:inputType="text|textMultiLine"
             android:gravity="top"
-            android:hint="Descreva o problema"/>
+            android:hint="Descreva o problema"
+            android:inputType="text|textMultiLine" />
 
         <EditText
             android:id="@+id/formulario_localizacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Inserir localização"  />
+            android:hint="Inserir descrição localização" />
 
        <RelativeLayout
            android:layout_width="match_parent"
@@ -41,8 +41,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="#00A8EC"
-            android:id="@+id/formulario_foto"
-            android:foreground="#cedfe6"/>
+            android:src="@drawable/camera"
+            android:id="@+id/formulario_foto"/>
            <Button
                android:id="@+id/formulario_button_Camera"
                android:layout_width="50dp"

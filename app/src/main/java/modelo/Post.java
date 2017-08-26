@@ -14,9 +14,14 @@ public class Post implements Serializable {
     private Timestamp dataHora;
     private String caminhoFoto;
     private String localizacao;
+    private byte[] photoBytes;
 
     public String getLocalizacao() {
         return localizacao;
+    }
+
+    public byte[] getPhotoBytes() {
+        return photoBytes;
     }
 
     public void setLocalizacao(String localizacao) {
@@ -91,5 +96,9 @@ public class Post implements Serializable {
     @Override
     public String toString(){
         return this.getId()+"-"+this.getTitulo();
+    }
+
+    public void setPhotoBytes(byte[] photoBytes) {
+        this.photoBytes = photoBytes;
     }
 }
