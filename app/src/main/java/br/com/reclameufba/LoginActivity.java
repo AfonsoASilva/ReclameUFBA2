@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import Controller.UsuarioController;
+import modelo.Usuario;
 
 public class LoginActivity extends Activity {
     private EditText campoUsuario, campoSenha;
@@ -23,6 +24,19 @@ public class LoginActivity extends Activity {
         usuarioController = UsuarioController.getInstance(context);
         campoUsuario = (EditText) findViewById(R.id.login_usuario);
         campoSenha = (EditText) findViewById(R.id.login_senha);
+        try {
+            testaInicializacao();
+        } catch (Exception e) {
+            exibeDialogo("Erro inicializando banco de dados");
+            e.printStackTrace();
+        }
+    }
+
+    public void testaInicializacao() throws Exception {
+        if (usuarioController.findAll().isEmpty()) {
+            Usuario usuario = new Usuario(null, "adm", "adm");
+            usuarioController.insert(usuario);
+        }
 
     }
 

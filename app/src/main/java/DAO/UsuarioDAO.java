@@ -4,6 +4,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import Conexao.Database;
 import modelo.Usuario;
 
@@ -35,6 +38,17 @@ public class UsuarioDAO extends Database {
         Cursor cursor = getDatabase().rawQuery(sql, selectionArgs);
         cursor.moveToFirst();
         return criaUsuario(cursor);
+    }
+    public List<Usuario> findAll() throws Exception {
+        List<Usuario> retorno = new ArrayList<Usuario>();
+        String sql = "SELECT * FROM " + TABLE;
+        Cursor cursor = getDatabase().rawQuery(sql, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            retorno.add(criaUsuario(cursor));
+            cursor.moveToNext();
+        }
+        return retorno;
     }
 
      public Usuario criaUsuario(Cursor cursor) {

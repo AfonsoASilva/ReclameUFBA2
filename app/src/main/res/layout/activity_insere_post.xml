@@ -40,8 +40,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="#00A8EC"
-            android:src="@drawable/camera"
+            android:background="#9fdcf5"
             android:id="@+id/formulario_foto"/>
            <Button
                android:id="@+id/formulario_button_Camera"

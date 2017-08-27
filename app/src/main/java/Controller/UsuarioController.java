@@ -2,6 +2,8 @@ package Controller;
 
 import android.content.Context;
 
+import java.util.List;
+
 import DAO.UsuarioDAO;
 import modelo.Usuario;
 
@@ -21,6 +23,9 @@ public class UsuarioController {
     }
     public void update(Usuario usuario) throws Exception {
         usuarioDAO.update(usuario);
+    }
+    public List<Usuario> findAll() throws Exception {
+        return usuarioDAO.findAll();
     }
 
     public boolean validacao(String login, String senha) throws Exception {
